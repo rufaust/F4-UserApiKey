@@ -1,0 +1,74 @@
+{
+    "f4_uak_api_for_developers.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "76737a09c24e04b36d7c383c6342af1e"
+    },
+    "f4_uak_create_api_key.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "0a2454cf86e3c9290ddcc717bfe8f968"
+    },
+    "f4_uak_do_not_tell_anyone_your_api_key.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "eb499b22c22bed93d49d44213b852f89"
+    },
+    "f4_uak_docs.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "a3907cd461d8739aa3266047bc4b8c0c"
+    },
+    "f4_uak_for_work_you_need_to_specify.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "201e8af14b30177a01563b657c56b937"
+    },
+    "f4_uak_invalid_scopes_detected.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "296f7ae25d162b1eff43587bf3531477"
+    },
+    "f4_uak_you_dont_have_api_keys.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "e64a5241118969cd71e481123e0bb0ab"
+    },
+    "f4_uak_your_api_keys.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "798bc80e772ecd575f4228fac667d613"
+    },
+    "option.f4_uak_allowed_scopes.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "33406c6c4de663d9821e35b48fa81198"
+    },
+    "option_explain.f4_uak_allowed_scopes.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "option_group.f4_userApiKey.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "219b0c0cc5d76632108110f3d600e394"
+    },
+    "option_group_description.f4_userApiKey.txt": {
+        "global_cache": false,
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    }
+}

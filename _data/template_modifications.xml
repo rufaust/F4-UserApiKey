@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template_modifications>
+  <modification type="public" template="account_wrapper" modification_key="f4_uak_add_tab_to_account_wrapper" description="Add tab to account wrapper" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[				<!--[XF:settings_links:bottom]-->]]></find>
+    <replace><![CDATA[$0
+<a class="blockLink {{ $pageSelected == 'f4_uak' ? 'is-selected' : '' }}" href="{{ link('account/api') }}">
+	{{ phrase('f4_uak_api_for_developers') }}
+</a>]]></replace>
+  </modification>
+</template_modifications>

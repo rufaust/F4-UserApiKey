@@ -1,0 +1,1 @@
+Invalid scopes detected

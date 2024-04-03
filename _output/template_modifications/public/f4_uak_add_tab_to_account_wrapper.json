@@ -1,0 +1,9 @@
+{
+    "template": "account_wrapper",
+    "description": "Add tab to account wrapper",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "\t\t\t\t<!--[XF:settings_links:bottom]-->",
+    "replace": "$0\n<a class=\"blockLink {{ $pageSelected == 'f4_uak' ? 'is-selected' : '' }}\" href=\"{{ link('account/api') }}\">\n\t{{ phrase('f4_uak_api_for_developers') }}\n</a>"
+}

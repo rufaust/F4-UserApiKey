@@ -1,0 +1,11 @@
+{
+    "route_type": "public",
+    "route_prefix": "account",
+    "sub_name": "api",
+    "format": "api/:int<api_key_id>/",
+    "build_class": "",
+    "build_method": "",
+    "controller": "XF:Account",
+    "context": "account",
+    "action_prefix": "Api"
+}

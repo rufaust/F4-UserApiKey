@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="f4_uak_api_for_developers" version_id="1000070" version_string="1.0.0"><![CDATA[API For developers]]></phrase>
+  <phrase title="f4_uak_create_api_key" version_id="1000070" version_string="1.0.0"><![CDATA[Create API key]]></phrase>
+  <phrase title="f4_uak_do_not_tell_anyone_your_api_key" version_id="1000070" version_string="1.0.0"><![CDATA[Do not tell anyone your API key. In case of a leak delete the key using the button below.]]></phrase>
+  <phrase title="f4_uak_docs" version_id="1000070" version_string="1.0.0"><![CDATA[Docs]]></phrase>
+  <phrase title="f4_uak_for_work_you_need_to_specify" version_id="1000070" version_string="1.0.0"><![CDATA[To work, you need to specify the API key in Headers.]]></phrase>
+  <phrase title="f4_uak_invalid_scopes_detected" version_id="1000070" version_string="1.0.0"><![CDATA[Invalid scopes detected]]></phrase>
+  <phrase title="f4_uak_you_dont_have_api_keys" version_id="1000070" version_string="1.0.0"><![CDATA[You dont have API keys]]></phrase>
+  <phrase title="f4_uak_your_api_keys" version_id="1000070" version_string="1.0.0"><![CDATA[Your API keys]]></phrase>
+  <phrase title="option.f4_uak_allowed_scopes" version_id="1000070" version_string="1.0.0"><![CDATA[Allowed Scopes]]></phrase>
+  <phrase title="option_explain.f4_uak_allowed_scopes" version_id="1000070" version_string="1.0.0"><![CDATA[]]></phrase>
+  <phrase title="option_group.f4_userApiKey" version_id="1000070" version_string="1.0.0"><![CDATA[[F4] User Api Key]]></phrase>
+  <phrase title="option_group_description.f4_userApiKey" version_id="1000070" version_string="1.0.0"><![CDATA[]]></phrase>
+</phrases>

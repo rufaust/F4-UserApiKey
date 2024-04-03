@@ -1,0 +1,22 @@
+<xf:title> {{ phrase('f4_uak_create_api_key') }} </xf:title>
+
+<xf:wrap template="account_wrapper" />
+
+<div class="block">
+	<div class="block-container">
+		<div class="block-body">
+			<xf:form action="{{ link('account/api/client-add') }}" method="POST" ajax="true">
+				<xf:textboxrow label="{{ phrase('title') }}" name="title" />
+				<xf:checkboxrow label="{{ phrase('allowed_scopes') }}" name="allow_all_scopes">
+					<xf:foreach loop="$allowedScopes" value="$scope">
+						<xf:option name="scopes[]" value="{$scope.api_scope_id}" checked="{$apiKey.scopes.{$scope.api_scope_id}}" label="{$scope.api_scope_id}" hint="{$scope.description}" /> </xf:foreach>
+					<xf:explain>{{ phrase('api_scopes_explain') }}</xf:explain>
+				</xf:checkboxrow>
+				
+				<xf:captcharow label="{{ phrase('verification') }}" force="true" force-visible="true" context="f4_uak" />
+
+				<xf:submitrow icon="save" /> 
+			</xf:form>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,15 @@
+{
+    "edit_format": "template",
+    "edit_format_params": "f4_uak_allowed_scopes",
+    "data_type": "array",
+    "sub_options": [
+        "*"
+    ],
+    "validation_class": "",
+    "validation_method": "",
+    "advanced": false,
+    "default_value": "[]",
+    "relations": {
+        "f4_userApiKey": 10
+    }
+}

@@ -1,0 +1,1 @@
+Do not tell anyone your API key. In case of a leak delete the key using the button below.

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+  <template type="admin" title="f4_uak_allowed_scopes" version_id="1000070" version_string="1.0.0"><![CDATA[<xf:checkboxrow name="{$inputName}" value="{$option.option_value}" label="{$option.title}" hint="{$hintHtml}" explain="{$explainHtml}" html="{$listedHtml}"> <xf:foreach loop="$xf.app.em.getRepository('XF:Api').findApiScopesForList().fetch()" key="$scopes" value="$scope"> 
+	<xf:option value="{$scope.api_scope_id}" label="{$scope.api_scope_id}" /> 
+	</xf:foreach> 
+</xf:checkboxrow>]]></template>
+  <template type="public" title="f4_uak_api" version_id="1000070" version_string="1.0.0"><![CDATA[<xf:title> {{ phrase('f4_uak_api_for_developers') }} </xf:title>
+<xf:wrap template="account_wrapper" />
+<div class="blockMessage blockMessage--warning blockMessage--iconic"> {{ phrase('f4_uak_do_not_tell_anyone_your_api_key') }} </div>
+<div class="block">
+	<div class="block-container">
+		<div class="block-body">
+			<h3 class="block-minorHeader"> {{ phrase('allowed_scopes') }} </h3>
+			<div class="block-row">
+				<ul>
+					<xf:foreach loop="$allowedScopes" value="$scope">
+						<li>{$scope.api_scope_id}</li>
+					</xf:foreach>
+				</ul>
+			</div>
+			<h3 class="block-minorHeader"> {{ phrase('f4_uak_for_work_you_need_to_specify') }} </h3>
+			<div class="block-row"> <code> XF-Api-Key: "API-key"; </code> </div>
+			<div class="block-footer">
+				<xf:button href="https://xenforo.com/docs/dev/rest-api/" target="_blank" class="button--primari"> {{ phrase('f4_uak_docs') }} </xf:button>
+				<xf:button href="{{ link('account/api/client-add') }}" class="button--cta" data-xf-click="overlay"> {{ phrase('f4_uak_create_api_key') }} </xf:button>
+			</div>
+			<xf:if is="$apiKeys is not empty">
+				<xf:datalist data-xf-init="responsive-data-list" class="dataList--separated">
+					<thead>
+						<xf:datarow rowtype="subSection">
+							<xf:cell colspan="3">{{ phrase('f4_uak_your_api_keys') }}</xf:cell>
+						</xf:datarow>
+						<xf:datarow rowtype="header">
+							<xf:cell>{{ phrase('title') }}</xf:cell>
+							<xf:cell>{{ phrase('api_key') }}</xf:cell>
+							<xf:cell>{{ phrase('last_used') }}</xf:cell>
+							<xf:cell>{{ phrase('action') }}</xf:cell>
+						</xf:datarow>
+					</thead>
+					<tbody class="dataList-rowGroup">
+						<xf:foreach loop="$apiKeys" value="$apiKey">
+							<xf:datarow>
+								<xf:cell>{$apiKey.title}</xf:cell>
+								<xf:cell>{$apiKey.api_key}</xf:cell>
+								<xf:cell>
+									<xf:if is="$apiKey.last_use_date">
+										<xf:date time="$apiKey.last_use_date" />
+										<xf:else /> {{ phrase('n_a') }} </xf:if>
+								</xf:cell>
+								<xf:cell>
+									<xf:button href="{{ link('account/api/delete', $apiKey) }}" class="button--primary" data-xf-click="overlay" data-xf-init="tooltip" title="{{ phrase('delete') }}"> <i class="fa fa-trash" aria-hidden="true"></i> </xf:button>
+								</xf:cell>
+							</xf:datarow>
+						</xf:foreach>
+					</tbody>
+				</xf:datalist>
+				<xf:else />
+				<h3 class="block-minorHeader"> {{ phrase('f4_uak_you_dont_have_api_keys') }} </h3>
+			</xf:if>
+		</div>
+	</div>
+</div>]]></template>
+  <template type="public" title="f4_uak_api_add" version_id="1000070" version_string="1.0.0"><![CDATA[<xf:title> {{ phrase('f4_uak_create_api_key') }} </xf:title>
+
+<xf:wrap template="account_wrapper" />
+
+<div class="block">
+	<div class="block-container">
+		<div class="block-body">
+			<xf:form action="{{ link('account/api/client-add') }}" method="POST" ajax="true">
+				<xf:textboxrow label="{{ phrase('title') }}" name="title" />
+				<xf:checkboxrow label="{{ phrase('allowed_scopes') }}" name="allow_all_scopes">
+					<xf:foreach loop="$allowedScopes" value="$scope">
+						<xf:option name="scopes[]" value="{$scope.api_scope_id}" checked="{$apiKey.scopes.{$scope.api_scope_id}}" label="{$scope.api_scope_id}" hint="{$scope.description}" /> </xf:foreach>
+					<xf:explain>{{ phrase('api_scopes_explain') }}</xf:explain>
+				</xf:checkboxrow>
+				
+				<xf:captcharow label="{{ phrase('verification') }}" force="true" force-visible="true" context="f4_uak" />
+
+				<xf:submitrow icon="save" /> 
+			</xf:form>
+		</div>
+	</div>
+</div>]]></template>
+</templates>

@@ -1,0 +1,4 @@
+<xf:checkboxrow name="{$inputName}" value="{$option.option_value}" label="{$option.title}" hint="{$hintHtml}" explain="{$explainHtml}" html="{$listedHtml}"> <xf:foreach loop="$xf.app.em.getRepository('XF:Api').findApiScopesForList().fetch()" key="$scopes" value="$scope"> 
+	<xf:option value="{$scope.api_scope_id}" label="{$scope.api_scope_id}" /> 
+	</xf:foreach> 
+</xf:checkboxrow>

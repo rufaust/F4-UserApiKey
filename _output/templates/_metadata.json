@@ -1,0 +1,17 @@
+{
+    "admin/f4_uak_allowed_scopes.html": {
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "8984b71d002da2bb8d23308b9537da42"
+    },
+    "public/f4_uak_api.html": {
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "5c21373dd17941d7f8f41145bc402a81"
+    },
+    "public/f4_uak_api_add.html": {
+        "version_id": 1000070,
+        "version_string": "1.0.0",
+        "hash": "b0263bc4e7a65e6248380afd0bf75381"
+    }
+}
